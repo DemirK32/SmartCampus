@@ -67,7 +67,7 @@ public class SensorResource {
 
         if (matchedRoom == null) {
             throw new LinkedResourceNotFoundException("Room does not exist for the given roomId.");
-        } // bu kismi degistirdik LinkedResourceNotFoundException ekledik
+        } //modified this part and added LinkedResourceNotFoundException
 
         String generatedSensorId = sensor.getType() + "-" + String.format("%03d", sensorIdCounter++);
         sensor.setId(generatedSensorId);

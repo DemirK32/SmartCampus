@@ -70,7 +70,7 @@ public class SensorReadingResource {
                     .build();
         }
         
-        //asdasdasd
+        
 
         if (reading.getTimestamp() == 0) {
             reading.setTimestamp(System.currentTimeMillis());
@@ -89,7 +89,7 @@ public class SensorReadingResource {
         readings.add(reading);
 
         sensor.setCurrentValue(reading.getValue()); // side effect part4
-        //Reading eklendiğinde parent sensor un currentValue alanı da güncellenmeli
+        // When a reading is added, the parent sensor's currentValue field should also be updated
 
         return Response.status(Response.Status.CREATED)
                 .entity(reading)

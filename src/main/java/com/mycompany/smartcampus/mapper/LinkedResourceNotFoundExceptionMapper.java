@@ -30,6 +30,7 @@ public class LinkedResourceNotFoundExceptionMapper implements ExceptionMapper<Li
                 .type(MediaType.APPLICATION_JSON)
                 .build();
     }
-    //Burada Response.status(422) yazıyoruz çünkü 
-    //Response.Status içinde standart enum olarak 422 yok. Bu normal
+    // We use Response.status(422) here because
+    // 422 is not available as a standard enum in Response.Status.
+    // This is normal.
 }
